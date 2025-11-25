@@ -16,8 +16,8 @@ import tensorflow as tf
 
 HERE = Path(__file__).resolve()
 DEFAULTS = {
-    "npz_path": HERE.parents[3] / "kesif_alani.derivatives.npz",
-
+    "npz_path": Path(r"C:\d_surucusu\arkeolojik_alan_tespit\archaeo_detect_base\cache\kesif_alani.derivatives.npz"),
+    "reference_raster": Path(r"C:\d_surucusu\arkeolojik_alan_tespit\archaeo_detect_base\kesif_alani.tif"),
     "model_path": HERE.parents[1] / "model_enki" / "enki0_0.keras",
     "output_dir": Path.cwd() / "enki_npz_inference",
     "tile_size": 350,
@@ -129,7 +129,8 @@ def parse_args() -> argparse.Namespace:
     parser.add_argument(
         "--reference-raster",
         type=Path,
-        help="Optional raster to read georeferencing from. Defaults to the path stored in NPZ metadata if available.",
+        default=DEFAULTS["reference_raster"],
+        help="Raster to read georeferencing from. Defaults to the configured project raster.",
     )
     parser.add_argument(
         "--gpkg-path",

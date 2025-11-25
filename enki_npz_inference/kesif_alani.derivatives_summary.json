@@ -1,0 +1,23 @@
+{
+  "npz_path": "C:\\d_surucusu\\arkeolojik_alan_tespit\\archaeo_detect_base\\cache\\kesif_alani.derivatives.npz",
+  "model_path": "C:\\d_surucusu\\arkeolojik_alan_tespit\\archaeo_detect_enki\\enki\\model_enki\\enki0_0.keras",
+  "tile_size": 350,
+  "stride": 175,
+  "batch_size": 32,
+  "num_tiles": 2484,
+  "class_names": [
+    "Negative",
+    "Positive"
+  ],
+  "confidence_threshold": 0.99,
+  "include_classes": [
+    "Positive"
+  ],
+  "min_margin": 0.1,
+  "nms_iou_threshold": 0.3,
+  "nms_max_detections": null,
+  "num_after_confidence": 75,
+  "num_after_class": 73,
+  "num_after_margin": 73,
+  "num_after_nms": 42
+}
